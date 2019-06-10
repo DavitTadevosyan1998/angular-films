@@ -1,0 +1,19 @@
+<div id="filmsItem">
+  <div class="cantainer">
+    <div id="body">
+      <img class="imgLogo" src="./../assets/col-1-head.jpeg" alt="">
+      <div class="row items">
+        <div class="item text-center col-4" *ngIf="film">
+          <img class="imgItem" src="{{film.Poster}}">
+        </div>
+        <div class="col-2">
+          <app-films-title></app-films-title>
+        </div>
+        <div class="col-6">
+          <app-films-title-text [film]="film"></app-films-title-text>
+        </div>
+        <app-films-text [film]="film"></app-films-text>
+      </div>
+    </div>
+  </div>
+</div>

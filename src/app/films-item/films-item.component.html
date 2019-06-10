@@ -1,0 +1,20 @@
+<div id="filmsItem">
+  <div class="container">
+    <div id="body">
+      <img class="imgLogo" src="./../assets/col-1-head.jpeg" alt="">
+      <div style="margin-bottom: 20px" class="text-center">
+        <h3>Search Films</h3>
+        <input type="text" name="search" [(ngModel)]="search">
+        <button style="margin-top: -5px; margin-left: 10px;" variant="outline-success" (click)="searchFilms($event)" >Submit</button>
+      </div>
+      <div class="row text-center items">
+        <div *ngFor="let film of filmsService.films" class="item col-4">
+          <a routerLink="/filmsData/{{film.imdbID}}">
+            <img class="imgItem" src="{{film.Poster}}" alt="Not Found">
+            <p>{{ film.Title }}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
